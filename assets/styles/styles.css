@@ -1,0 +1,32 @@
+body {
+    background-color: #cdcdcd;
+    font-family: tahoma;
+    color: #000000;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.links {
+    color: #ff1e00;
+}
+
+.fav-color {
+    color: #008000;
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    background-color: #363434;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 6px;
+    text-decoration: none;
+
+}

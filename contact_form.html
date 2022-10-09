@@ -1,0 +1,42 @@
+<!--Robert Marsh
+Sept 29, 2022
+Webpage displays contact form and links to a JS file-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Web page for contact">
+        <meta name="keywords" content="contact, form">
+        <meta name="author" content="Robert Marsh">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
+        <script type="text/javascript" src="./assets/scripts/contact-form.js"></script>
+    </head>
+    <body>
+        <div class="center-text"  class="links">
+            <a href="./index.html" class="links">Home</a>
+            <a href="./biography.html" class="links">Biography</a>
+            <a href="./favorite_hobby.html" class="links">Favorite Hobby</a>
+            <a href="./resume.html" class="links">Resume</a>
+            <a href="./project.html" class="links">Project</a>
+            <a href="./contact_form.html" class="links">Contact</a>
+        </div>
+
+        <h1>Contact</h1>
+
+        <form>
+            <label for="name">Enter Name</label><br/>
+            <input type="text" id="name" name="name" size="50"><br/>
+            <label for="email">Enter Email</label><br/>
+            <input type="email" id="email" name="email" size="50"><br/>
+            <label for="message">Enter email message</label><br/>
+            <textarea id="message" rows="15" cols="50"></textarea><br/>
+            <input type="submit" id="submit" value="Send Message">
+            <input type="hidden" id="contact-address" value="whybnrml@hotmail.com">
+
+        </form>
+    </body>
+</html>

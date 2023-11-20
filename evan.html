@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+      
+        button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+	    
+        }
+	button:hover {
+	    background-color: #6F6F6F
+	}
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div <img src="/images/evan.jpeg" alt="Stickman" width="500">
+    </div>
+    <div id="quote-container">
+        <p class="quote"></p>
+        <button onclick="generateQuote()">Generate</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "An investment in knowledge pays the best interest.",
+            "By failing to prepare, you are preparing to fail.",
+            "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+            "Well done is better than well said.",
+            "You may delay, but time will not.",
+            "Early to bed and early to rise makes a man healthy, wealthy, and wise.",
+            "In this world nothing can be said to be certain, except death and taxes.",
+            "Our new Constitution is now established, and has an appearance that promises permanency; but in this world nothing can be said to be certain, except death and taxes.",
+            "We are all born ignorant, but one must work hard to remain stupid.",
+            "An investment in knowledge always pays the best interest."
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            const quoteElement = document.querySelector('.quote');
+            quoteElement.innerHTML = `"${quote}" - Benjamin Franklin`;
+        }
+    </script>
+</body>
+</html>

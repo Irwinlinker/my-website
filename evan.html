@@ -4,19 +4,23 @@
     <title>Random Quote Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Bruno Ace SC' rel='stylesheet'>
     <style>
         body {
-            background-color: black;
-            font-family: Arial, sans-serif;
+            background-image: url('./assets/images/retro_background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Bruno Ace SC', sans-serif;
             color: white;
         }
       
         button {
-            background-color: #6F6F6F;
+            background-color: #ff009d;
             color: white;
             border: none;
             padding: 10px 10px;
-	    justify-content: center;
+	        justify-content: center;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -30,34 +34,47 @@
 	    background-color: #6F6F6F
 	    }
         .quote {
+            font-size: 30px;
             font-style: italic;
             margin-top: 20px;
         }
 	    .center {
- 	     display: flex;
- 	     justify-content: center;
-	     align-items: center;
+ 	        text-align: center;
+            margin: auto;
         }
-   	 @media screen and (max-width: 600px) {
-      		.responsive-text {
-        		font-size: 1.5em;
-      		}
-    	}
+        @media screen and (max-width: 600px) {
+            .responsive-text {
+                font-size: 1.5em; /* Adjust the size for smaller screens */
+            }
+        }    
+        .neonText {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
     </style>
 </head>
 <body>
     <div class="center">
-        <video muted playsinline loop autoplay preload="auto" height="300" >
+        <video playsinline loop autoplay height="500" >
             <source src="./assets/images/evan_anime_animation.mp4" type="video/mp4">
           </video>
     </div>
-    <span class="center, responsive-text">Press the button below to see all the famous things I've said</span>
-    <div id="quote-container" class="center">
-        
-        <button onclick="generateQuote()">Tap Me!</button>
+    <div class="center">
+        <p class="center, responsive-text">Press the button below to see all the famous things I've said</p>
     </div>
-    <div class="center, responsive-text">
-	<p class="quote"></p>
+    <div id="quote-container" class="center">
+        <button onclick="generateQuote()" style="font-family: Bruno Ace SC, sans-serif">Tap Me!</button>
+    </div>
+    <div class="center">
+	    <p class="quote"></p>
     </div>
 
     <script>
@@ -99,6 +116,7 @@
             const quoteElement = document.querySelector('.quote');
             quoteElement.innerHTML = `"${quote}" - Evan Mackes`;
         }
+
     </script>
 </body>
 </html>

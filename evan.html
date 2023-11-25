@@ -16,7 +16,7 @@
             color: white;
             border: none;
             padding: 10px 10px;
-	        justify-content: center;
+	    justify-content: center;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -39,20 +39,25 @@
  	     justify-content: center;
 	     align-items: center;
         }
+   	 @media screen and (max-width: 600px) {
+      		.responsive-text {
+        		font-size: 1.5em;
+      		}
+    	}
     </style>
 </head>
 <body>
     <div class="center">
-        <video playsinline loop autoplay height="500" >
+        <video playsinline loop autoplay height="300" >
             <source src="./assets/images/evan_anime_animation.mp4" type="video/mp4">
           </video>
     </div>
-    <span class="center" style="font-size: 30px">Press the button below to see all the famous things I've said</span>
+    <span class="center, responsive-text" style="font-size: 30px">Press the button below to see all the famous things I've said</span>
     <div id="quote-container" class="center">
         
         <button onclick="generateQuote()">Tap Me!</button>
     </div>
-    <div class="center">
+    <div class="center, responsive-text">
 	<p class="quote"></p>
     </div>
 
